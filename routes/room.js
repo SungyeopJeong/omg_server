@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const getCode = () => {
-    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
     let str;
 
     do {
