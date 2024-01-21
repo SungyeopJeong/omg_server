@@ -11,15 +11,14 @@ const getCode = () => {
         for (let i = 0; i < 6; i++) {
             str += chars.charAt(Math.floor(Math.random() * chars.length));
         }
-    } while (code.includes(str));
+    } while (room.has(str));
 
     return str;
 };
 
 router.get("/create", (_req, res) => {
     const newCode = getCode();
-    code.push(newCode);
-    console.log(code);
+    room.set(newCode, []);
     res.status(200).send(newCode);
 });
 
