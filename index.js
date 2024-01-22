@@ -47,14 +47,15 @@ io.on('connection', (socket) => {
 
     socket.on('send', (msg) => {
         io.emit(`game ${msg.code}`, {
-            'acc x': msg.accX,
-            'acc y': msg.accY,
-            'acc z': msg.accZ,
-            'acc t': msg.accT,
-            'gyr x': msg.gyrX,
-            'gyr y': msg.gyrY,
-            'gyr z': msg.gyrZ,
-            'gyr t': msg.gyrT,
+            'name': msg.name,
+            'accX': msg.accX,
+            'accY': msg.accY,
+            'accZ': msg.accZ,
+            'accT': msg.accT,
+            'gyrX': msg.gyrX,
+            'gyrY': msg.gyrY,
+            'gyrZ': msg.gyrZ,
+            'gyrT': msg.gyrT,
         });
     });
 
